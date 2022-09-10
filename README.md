@@ -13,7 +13,7 @@ Sui has a native token called SUI, with a fixed supply. The SUI token is used to
 
 Sui is backed by a number of state-of-the-art peer-reviewed works and years of open source development.
 
-# Commands to install [Sui node](https://github.com/TheHolyCryptoGuardian/Sui/blob/main/Node)
+# Commands to install [Sui node](https://github.com/TheHolyCryptoGuardian/Sui/blob/main/SuiNode)
 
 Use `wget -O sui.sh https://raw.githubusercontent.com/TheHolyCryptoGuardian/Sui/main/SuiNode && chmod +x sui.sh && ./sui.sh` to install Sui node quickly.
 
