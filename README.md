@@ -1,3 +1,17 @@
+# Commands to install [Sui node](https://github.com/TheHolyCryptoGuardian/Sui/blob/main/SuiNode)
+
+Use `wget -O sui.sh https://raw.githubusercontent.com/TheHolyCryptoGuardian/Sui/main/SuiNode.sh && chmod +x sui.sh && ./sui.sh` to install Sui node quickly.
+
+Use `curl -s -X POST http://127.0.0.1:9000 -H 'Content-Type: application/json' -d '{ "jsonrpc":"2.0", "method":"rpc.discover","id":1}' | jq .result.info` to check your node.
+
+Use `journalctl -u suid -f -o cat` to check node logs.
+
+Use `sudo systemctl restart suid` to restart the node.
+
+Use `sudo systemctl stop suid` to stop the node.
+
+Use `sudo systemctl stop suid` then `sudo systemctl disable suid` then `rm -rf ~/sui /var/sui/` and then `rm /etc/systemd/system/suid.service` to delete Sui node.
+
 # Sui
 
 Sui is the first permissionless Layer 1 blockchain designed from the ground up to enable creators and developers to build experiences that cater to the next billion users in web3. Sui is horizontally scalable to support a wide range of application development with unrivaled speed at low cost.
@@ -12,17 +26,3 @@ Sui is written in Rust and supports smart contracts written in the Move programm
 Sui has a native token called SUI, with a fixed supply. The SUI token is used to pay for gas, and is also used as delegated stake on validators within an epoch. The voting power of validators within this epoch is a function of this delegated stake. Validators are periodically reconfigured according to the stake delegated to them. In any epoch the set of validators is Byzantine fault tolerant. At the end of the epoch, fees collected through all transactions processed are distributed to validators according to their contribution to the operation of the system. Validators can in turn share some of the fees as rewards to users that delegated stake to them.
 
 Sui is backed by a number of state-of-the-art peer-reviewed works and years of open source development.
-
-# Commands to install [Sui node](https://github.com/TheHolyCryptoGuardian/Sui/blob/main/SuiNode)
-
-Use `wget -O sui.sh https://raw.githubusercontent.com/TheHolyCryptoGuardian/Sui/main/SuiNode && chmod +x sui.sh && ./sui.sh` to install Sui node quickly.
-
-Use `curl -s -X POST http://127.0.0.1:9000 -H 'Content-Type: application/json' -d '{ "jsonrpc":"2.0", "method":"rpc.discover","id":1}' | jq .result.info` to check your node.
-
-Use `journalctl -u suid -f -o cat` to check node logs.
-
-Use `sudo systemctl restart suid` to restart the node.
-
-Use `sudo systemctl stop suid` to stop the node.
-
-Use `sudo systemctl stop suid` then `sudo systemctl disable suid` then `rm -rf ~/sui /var/sui/` and then `rm /etc/systemd/system/suid.service` to delete Sui node.
